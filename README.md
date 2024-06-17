@@ -12,6 +12,6 @@ Have fun!
 
 Updates
 ----
-1.0.1 updated due to minor non-fatal error regarding initialization at some localtime with certain user input. Since year element passed by reference and not value, addition of 2000 may lead to improper detection as overlong. Subtraction of 2000 added before return statements in 3 locations. This solves. Did so rather than refactoring and altering any progam logic, though I may do that in the future if time allows so year is xxxx. Which in hindsight xxxx year for length of year variable may have been a superior choice due to leap year algo.
+1.0.1 updated due to minor difficult to reproduce non-fatal error regarding initialization at some localtime with certain user input or where initialization prior to user input fails to occur. Since year element passed by reference and not value, addition of 2000 may lead to improper detection as overlong. Subtraction of 2000 added before return statements in 3 locations. This solves. Did so rather than refactoring and altering any progam logic, though I may do that in the future if time allows so year is xxxx. Which in hindsight xxxx year for length of year variable may have been a superior choice due to leap year algo.
 
 
