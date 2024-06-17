@@ -6,6 +6,8 @@ Also, hosting in another timezone may affect the local time functionality and yo
 
 The timestamper bot uses discord.py (which you can find here https://discordpy.readthedocs.io/en/stable/index.html and on github here https://github.com/Rapptz/discord.py) and the discord API. Takes a time in your localtime in 24H time mm/dd/yy and converts it to a discord usable epoch timestamp in the format <t:xyz > which can be easily copypasted and a verification next to it. The only library I used was python's "time" besides "discord" and "asyncio" which you need for a discord bot. datetime actually makes it more complicated with timezones and naive and non-naive functionality. Has an algorithm that accounts for leap year and related to prevented odd errors. Credit me if you use it. Feel free to message me with questions. 
 
+1.0.1 updated due to minor non-fatal error regarding initialization at some localtime with certain user input. Since year element passed by reference and not value, addition of 2000 may lead to improper detection as overlong. Subtraction of 2000 added before return statements in 3 locations. This solves. Did so rather than refactoring and altering any progam logic, though I may do that in the future if time allows so year is xxxx which in hindsight may have been a superior choice due to leap year algo.
+
 MIT license.
 
 Have fun!
