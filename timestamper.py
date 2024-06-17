@@ -28,6 +28,7 @@ def is_valid_m(years, month, day):
 	day_month = [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 	years = years + 2000
 	if years < 2024: 
+		years = years - 2000 #passed a reference and not a value
 		return False
 	if(
 		years % 4 == 0 and 
@@ -40,8 +41,10 @@ def is_valid_m(years, month, day):
 		(day >=1 and day <= day_month[month])
 		)
 	):
+			years = years - 2000 #passed a reference and not a value
 			return True
 	else:
+			years = years - 2000 #passed a reference and not a value
 			return False
 #check length mm-dd-yy so 2/24/24 is wrong and so is 02/24/2024, must be mm/dd/yy
 def isitDate(v):
